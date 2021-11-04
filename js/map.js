@@ -1,4 +1,4 @@
-// 카카오 지도
+// kakao map    
 var mapContainer = document.getElementById('map'), 
   mapOption = {
     center: new kakao.maps.LatLng(33.450701, 126.570667), 
@@ -8,7 +8,7 @@ var mapContainer = document.getElementById('map'),
 var map = new kakao.maps.Map(mapContainer, mapOption); 
 var geocoder = new kakao.maps.services.Geocoder();
 
-geocoder.addressSearch('송도 갯벌로 129', function(result, status) {
+geocoder.addressSearch('인천광역시 연수구 송도미래로 30', function(result, status) {
   if (status === kakao.maps.services.Status.OK) {
 
     var coords = new kakao.maps.LatLng(result[0].y, result[0].x);

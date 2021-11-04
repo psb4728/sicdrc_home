@@ -1,0 +1,43 @@
+.company_wrap {
+  margin-bottom: 10rem;
+  opacity: 0;
+  transform: translateY(200px);
+  animation: show 0.8s 1.4s forwards;
+}
+
+.convention_tit {
+  opacity: 0;
+  transform: translateY(200px);
+  animation: show 0.8s 1s forwards;
+}
+.convention_tit h3 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+.convention_tit p {
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin-bottom: 4rem;
+}
+
+.company_wrap {
+  border-top: 1px solid var(--blue);
+}
+.company_wrap .items {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+  padding: 4rem 0;
+  box-sizing: border-box;
+}
+.company_wrap .items li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30rem;
+  height: 30rem;
+  border: 1px solid var(--blue);
+}

@@ -10,7 +10,7 @@
   <meta name="author" content="31system" />
   <meta name="description" content="안녕하세요 유사투자 소비자 피해구제 센터" />
   <meta name="Keywords" content="유사투자 소비자 피해구제 센터, 피해자, 구제센터, 피해자 구제센터, 소비자 피해, 유사투자 피해, 유사투자 피해 분쟁, 유사투자자문업 소식" />
-  <title>유사투자 소비자 피해구제 센터</title>
+  <title>상담내역 조회</title>
 
   <!-- og -->
   <meta property="og:type" content="website" />
@@ -35,10 +35,13 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/convention.css">
 
   <!-- jQuery-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
+  <!-- Js -->
+  <script src="./js/common.js" defer></script> 
 </head>
 
 <body>
@@ -49,16 +52,41 @@
     <!-- Mobile Menu -->
     <div id="menu" class="mo_menu"></div>
 
-    <!-- main -->
-    <main class="main">
-      <img src="./images/main_img.png" alt="유사투자 소비자패해 구제센터">
-      <div class="solution_box">
-        <ul>
-          <li>총 분쟁 해결 건수 : 113904건 /</li>
-          <li>분쟁 조정 진행 중 : 12768건</li>
-        </ul>
+    <!-- top_info -->
+    <article class="top_info empty">
+      <section class="left_content show-on-scroll">
+        <h2 class="tit">유사투자 소비자 분쟁 협약사</h2>
+        <p class="text">
+          우리 유사투자 소비자피해 구제센터와 소비자 분쟁 원스톱 해결 협약업체를 소개합니다.<br>
+          * 소비자 분쟁 원스톱 해결 협약이란, 우리 유사투자자문업간의 협약으로써<br>
+          해당 유사투자자운업자가 우리 센터를 통해 피신청인이 될 경우 24시간<br>
+          (주말, 공휴일 제외, 업무시간 外 접수 시 다음 업무시간으로부터 24시간)<br>
+          이내에 공정거래위원회 고지 제2016-15호 소비자 분쟁 해결 기준에 따라 처리하는 협약입니다.
+        </p>
+      </section>
+      <div class="img_box">
+        <img src="./images/intro4.png" alt="">
       </div>
-    </main>
+    </article>
+
+    <div class="inner">
+      <section class="convention_tit">
+        <h3>유사투자 소비자 분쟁 협약사</h3>
+        <p>소비자 분쟁 원스톱 해결 협약업체를 소개합니다.</p>
+      </section>
+
+      <article class="company_wrap">
+        <ul class="items">
+          <li><img src="./images/company1.png" alt="에스에이치투자그룹"></li>
+          <li><img src="./images/company2.png" alt="에스에이치투자그룹"></li>
+        </ul>
+
+        <!-- paging -->
+        <div id="paging" class="paging"></div>
+      </article>
+
+    </div>
+
   </div>
 
   <!-- Footer -->
@@ -70,8 +98,10 @@
     $(function () {
       $("#header").load("./common/header.html");
       $("#menu").load("./common/menu.html");
+      $("#paging").load("./common/pagination.html");
       $("#footer").load("./common/footer.html");
     });
+
   </script>
 </body>
 

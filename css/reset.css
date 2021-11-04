@@ -109,17 +109,19 @@ section {
 
 /* input 기본 스타일 초기화 */
 input {
-  /* -webkit-appearance: none;
+  -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none; */
+  appearance: none;
   outline: none;
+  padding: .5rem;
   color: var(--text-color);
   box-sizing: border-box;
-  border: 1px solid var(--border-color);
+  border: 1px solid #C7D1DC;
+  box-sizing: border-box;
 }
 
 input::placeholder {
-  color: #707070;
+  color: #C6CACF;
 }
 
 /* input type number 에서 화살표 제거 */
@@ -148,7 +150,8 @@ html {
   --main-color: #1D4C81;
   --sub-color: #18ABB2;
   --text-color: #2E3036;
-  --hover-color: #41729F;   
+  --hover-color: #245C9B;
+  --blue: #E4EBF2;
   --border-color: #707070;
   --white: #fff;                  
   --shadow: 0 7px 10px rgba(0, 0, 0, 0.08);
@@ -203,14 +206,42 @@ q:after {
   content: none;
 }
 
+select {
+  font-family: 'S-Core';
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  background-image: url("../images/select.png");
+  background-repeat: no-repeat;
+  background-position: right 2px center;
+  cursor: pointer;
+  background-color:#fff;
+  padding: .5rem 2.4rem .5rem .5rem;
+  border: 1px solid #C7D1DC;
+  box-sizing: border-box;
+}
+
+
 textarea {
-  border-radius: 5px;
+  padding: 1rem;
+  color: var(--text-color);
+  border: 1px solid #C7D1DC;
+  box-sizing: border-box;
+}
+input::placeholder,
+textarea::placeholder {
+  font-size: 1.4rem;
+  color: #C6CACF;
 }
 
 input:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
   outline: 1px solid var(--main-color);
-  ;
 }
 
 table {
@@ -243,14 +274,9 @@ a {
   visibility: hidden;
 }
 
-@media screen and (max-width: 1024px) { 
-  html {
-    font-size: 60%;
-  }
-}
 
 @media screen and (max-width: 786px) {
   html {
-    font-size: 55%;
+    font-size: 60%;
   }
 }

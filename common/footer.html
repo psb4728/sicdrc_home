@@ -1,7 +1,7 @@
 <div class="inner">
   <a href="index.html"><img src="./images/footer_logo.png" alt="유사투자소비자피해 구제센터"></a>
   <div>
-    <a href="#" class="top_btn"><i class="xi-angle-up-min"></i>TOP</a>
+    <a href="javascript:void()" class="top_btn"><i class="xi-angle-up-min"></i>TOP</a>
     <ul>
       <li>Tel : 1644-6217 / E-mail : help@sicdrc.or.kr</li>
       <li>주소 : 인천광역시 연수구 송도미래로 30, 이동 801호 (송도동, 송도 BRC 스마트밸리 지식산업센터)</li>
@@ -13,7 +13,6 @@
 <script>
   // back to top button
   $('.top_btn').on('click', function(e) {
-    e.preventDefault();
-    $('html, body').animate({scrollTop:0}, '300');
+    window.scrollTo({top:location, behavior:'smooth'});
   });
 </script>
