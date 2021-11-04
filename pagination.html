@@ -1,0 +1,18 @@
+<ul>
+  <li class="prev_btn"><a href="javascript:void(0);"><i class="xi-angle-left"></i></a></li>
+  <li class="num active"><a href="javascript:void(0);">1</a></li>
+  <li class="num"><a href="javascript:void(0);">2</a></li>
+  <li class="num"><a href="javascript:void(0);">3</a></li>
+  <li class="num"><a href="javascript:void(0);">4</a></li>
+  <li class="num"><a href="javascript:void(0);">5</a></li>
+  <li class="next_btn"><a href="javascript:void(0);"><i class="xi-angle-right"></i></a></li>
+</ul>
+
+<script>
+  $(function() {
+    $('.num').on('click', function() {
+      $('.num').removeClass('active');
+      $(this).addClass('active');
+    });
+  });
+</script>
