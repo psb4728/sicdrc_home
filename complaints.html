@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="format-detection" content="telephone=no" />
+  <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=yes" name="viewport" />
+  <meta name="author" content="31system" />
+  <meta name="description" content="유사투자 소비자 피해 구제 센터는, 금융투자자 피해 예방과 분쟁 해결을 위해 노력하겠습니다. 유사투자자문업 소식관 유사투자 소비자 피해 구제 센터는, 언제나 소비자의 편에서 분쟁 해결과 피해 예방에 힘쓰겠습니다." />
+  <meta name="Keywords" content="유사투자 소비자 피해구제 센터, 피해자, 구제센터, 피해자 구제센터, 소비자 피해, 유사투자 피해, 유사투자 피해 분쟁, 유사투자자문업 소식" />
+  <title>빠른 민원</title>
+
+  <!-- og -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="유사투자 소비자 피해구제 센터" />
+  <meta property="og:title" content="유사투자 소비자 피해구제 센터" />
+  <meta property="og:description" content="유사투자 소비자 피해 구제 센터는, 금융투자자 피해 예방과 분쟁 해결을 위해 노력하겠습니다. 유사투자자문업 소식관 유사투자 소비자 피해 구제 센터는, 언제나 소비자의 편에서 분쟁 해결과 피해 예방에 힘쓰겠습니다." />
+  <meta property="og:url" content="#" />
+  <meta property="og:image" content="/images/kakao_img.png" />
+  <meta property="og:image:width" content="800" />
+  <meta property="og:image:height" content="400" />
+
+  <!-- twitter -->
+  <meta name="twitter:title" content="유사투자 소비자 피해구제 센터 입니다." />
+  <meta name="twitter:description" content="유사투자 소비자 피해 구제 센터는, 금융투자자 피해 예방과 분쟁 해결을 위해 노력하겠습니다. 유사투자자문업 소식관 유사투자 소비자 피해 구제 센터는, 언제나 소비자의 편에서 분쟁 해결과 피해 예방에 힘쓰겠습니다." />
+  <meta name="twitter:url" content="#" />
+  <meta name="twitter:image" content="/images/kakao_img.png" />
+
+  <!-- Faivicon -->
+  <link rel="icon" type="image/png" href="/images/favicon.ico">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/complaints.css">
+
+  <!-- jQuery-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  <!-- Js -->
+  <script src="/js/common.js" defer></script> 
+  
+</head>
+
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header id="header" class="header"></header>
+
+    <!-- Mobile Menu -->
+    <div id="menu" class="mo_menu"></div>
+
+    <div class="inner com_wrap">
+      <h2 class="title">빠른 민원</h2>
+      <section class="content_container">
+        <h3 class="sub_tit">위약금 계산기</h3>
+        <div class="calculator_wrap">
+          <article class="input_info">
+            <div class="input_wrap">
+              <label>가입시작일 / 해지일자</label>
+              <div class="dete_wrap">
+                <input type="date" name="start_date" class="dete_input">
+                <input type="date" name="end_date" class="dete_input">
+              </div>
+            </div>
+            <div class="input_wrap">
+              <label>총 결제금액</label>
+              <input type="text" name="amt" id="amt" placeholder="총결제금액" required class="money">
+            </div>
+          </article>
+
+          <article class="auto_wrap">
+            <div class="input_wrap">
+              <label>이용일자</label>
+              <input type="text" name="use_day" id="use_day" placeholder="이용일자" required oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+            </div>
+            <div class="input_wrap">
+              <label>1일 이용료</label>
+              <input type="text" name="one_day_amt" id="one_day_amt" placeholder="1일 이용료" required >
+            </div>
+            <div class="input_wrap">
+              <label>서비스 이용료</label>
+              <input type="text" name="suv_input" id="suv_input" placeholder="서비스 이용료" required >
+            </div>
+            <div class="input_wrap">
+              <label>위약금10%</label>
+              <input type="text" name="pn_amt" id="pn_amt" placeholder="위약금10%"  class="money" required>
+            </div>
+          </article>
+        </div>
+
+        <article class="total_wrap">
+          <div class="wrap">
+            <div class="input_wrap">
+              <label>총 차감금액<br>(이용료+위약금)</label>
+              <div>
+                <input type="text" name="total_deduction" id="total_deduction" disabled><span>원</span>
+              </div>
+            </div>
+            <div class="input_wrap">
+              <label>부분취소<br>완료금액</label>
+              <div>
+                <input type="text" name="use_amt" id="use_amt" disabled><span>원</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="reset_wrap">
+            <button class="reset_btn" onclick="location.reload();"><img src="/images/reset_icon.png" alt="초기화">초기화</button>
+          </div>
+        </article>
+      </section>
+
+      <section class="content_container">
+        <h3 class="sub_tit">결제내역 조회 및 결제취소 요청</h3>
+        <article class="lookup_wrap">
+          <h4>조희정보 입력</h4>
+          <form onSubmit="return false;">
+            <div class="input_wrap">
+              <label for="userName">고객명</label>
+              <input type="text" name="userName" id="userName" class="lookup_input">
+            </div>
+            <div class="input_wrap">
+              <label for="userPhoneNum">휴대전화 뒤 4자리</label>
+              <input type="tel" name="userPhoneNum" id="userPhoneNum" class="lookup_input" maxlength="4">
+            </div>
+            <div class="input_wrap">
+              <label for="contractPirce">금액</label>
+              <input type="text" name="contractPirce" id="contractPirce" class="lookup_input">
+            </div>
+            <div class="input_wrap">
+              <label for="ackNumber">승인번호</label>
+              <input type="text" name="ackNumber" id="ackNumber" class="lookup_input">
+            </div>
+
+            <div class="check_box_wrap">
+              <label for="terms" class="checkbox">
+                <input type="checkbox" name="terms" id="terms" class="checkbox_input">
+                <span class="checkmark_box">
+                  <span class="checkmark"></span>
+                </span>
+                <span class="check_text">[필수] 개인정보 수집 및 이용 동의서</span>
+              </label>
+            </div>
+
+            <div class="btn_wrap form_btn_wrap">
+              <button class="lookup_btn" onclick="requestForm()">조회</button>
+            </div>
+          </form>
+        </article>
+
+        <article class="info_content">
+          <h4>홍길동님 결제건</h4>
+          <div class="table_container">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>결제일</th>
+                <th>고객명</th>
+                <th>결제금액</th>
+                <th>결제상태</th>
+                <th>상담일자</th>
+              </tr>
+            </thead>
+            
+            <tbody>
+              <tr>
+                <td>
+                  <input type="checkbox" class="table_check">
+                </td>
+                <td class="over">2021.12.02</td>
+                <td>홍**</td>
+                <td class="over"><a onclick="window.open('./password.html','password','width=840, height=960, scrollbars=yes, resizable=no, toolbars=no, menubar=no')" target="blank">5,000,000</a></td>
+                <td>접수중</td>
+                <td class="over">2021.11.04</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="table_check"></td>
+                <td class="over">2021.12.02</td>
+                <td>홍**</td>
+                <td class="over"><a onclick="window.open('./password.html','password','width=840, height=960, scrollbars=yes, resizable=no, toolbars=no, menubar=no')" target="blank">5,000,000</a></td>
+                <td>접수중</td>
+                <td class="over">2021.11.04</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="btn_wrap">
+            <a href="./request.html" class="btn">취소요청</a>
+          </div>
+
+        </div>
+        </article>
+      </section>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer">
+    
+  </footer>
+
+  <script type="text/javascript">
+    $(function () {
+      $("#header").load("/common/header.html");
+      $("#menu").load("/common/menu.html");
+      $("#footer").load("/common/footer.html");
+
+    });
+
+    let dateInputs = document.querySelectorAll('.dete_input');
+    let total = document.querySelector('#use_day');
+
+    // 1번째 날짜를 오늘 날짜로 지정
+    dateInputs[1].valueAsDate = new Date();
+
+    function calculateElapse() {
+      if (!isNaN(dateInputs[0].valueAsNumber) && !isNaN(dateInputs[1].valueAsDate)) { 
+        total.value = "" + ((dateInputs[1].valueAsDate - dateInputs[0].valueAsDate) / (24 * 60 * 60 * 1000) + 1);
+      }
+    }
+
+    dateInputs.forEach(elements => elements.addEventListener('change', calculateElapse));
+
+
+    $(function () {
+      // input 단위 
+      (function inputDollar() {
+        $('.money').on('keyup blur', _formatInput);
+      }());
+
+      function _formatInput(e) {
+        var $el = $(this);
+        var dollars = $el.val();
+
+        dollars = formatDollars(dollars);
+
+        if (e.type === 'blur') {
+          dollars = dollars.split('.')[0];
+        }
+        $el.val(dollars);
+      }
+      function formatDollars(dollars, separator) {
+        var parts = dollars.toString().split('.');
+        var separator = separator || ',';
+
+        parts[0] = parts[0]
+              .toString() // make it a string
+              .replace(/\D*/g, '') // replace non-numbers
+              .replace(/\B(?=(\d{3})+(?!\d))/g, separator); // insert commas
+
+        dollars =  parts.join('.');
+
+        return dollars;
+      }
+                
+      
+      $("#use_day, #one_day_amt, #amt, #suv_input, #pn_amt, #total_deduction").keyup(function () {
+        function comma(str) {//콤마찍기
+          str = String(str);
+          return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
+        }
+        function uncomma(str) {//콤마풀기
+          str = String(str);
+            return str.replace(/[^\d]+/g, '');
+          }
+
+          var sum1 = parseInt(uncomma($("#amt").val()) || 0 );
+          var sum2 = parseInt(uncomma($("#use_day").val()) || 0 );
+          var sum3 = parseInt(uncomma($("#one_day_amt").val()) || 0 );
+          var sum5 = parseInt(uncomma($("#use_day").val()) || 0 );
+          var to1= comma(Math.floor(sum1 / 365));
+          var sum4 = parseInt(uncomma(to1) || 0 );
+          var to2= comma(sum2 * sum4);
+          var to3= comma(sum1 * 0.1);
+          var sum6 = parseInt(uncomma(to3) || 0 );
+          var to4= comma((sum5 * sum4) + sum6);
+          var sum7 = parseInt(uncomma(to4) || 0 );
+          var to5= comma(sum1 - sum7);
+        
+        $('#one_day_amt').val(to1);
+        $('#suv_input').val(to2);
+        $('#pn_amt').val(to3);
+        $('#total_deduction').val(to4);
+        $('#use_amt').val(to5);
+      });
+    });
+
+    // key enter 새로고침 막기
+    $(".lookup_input").keypress(function(e) { 
+      if (e.keyCode == 13){
+        requestForm();
+        return false;
+      }    
+    });
+
+    // form input value check
+    function requestForm() {
+      if($("#userName").val() == ''){
+        alert("이름을 입력해 주세요.");    			
+        setTimeout(function(){
+          $('#userName').focus();
+        }, 1);
+      return false;	    			   	
+      }
+			if($("#userPhoneNum").val() == ''){
+        alert("휴대폰번호를 입력해 주세요.");  
+        setTimeout(function(){
+          $('#userPhoneNum').focus();
+        }, 1);
+				return false;	
+			}
+      if($("#contractPirce").val() == ''){
+        alert("금액을 입력해 주세요.");    
+        setTimeout(function(){
+          $('#contractPirce').focus();
+        }, 1);    			
+        return false;	    			   	
+      }
+      if($("#ackNumber").val() == ''){
+        alert("승인번호를 입력해 주세요.");    
+        setTimeout(function(){
+          $('#ackNumber').focus();
+        }, 1);    			
+        return false;	    			   	
+      }
+			
+			if($("input:checkbox[id='terms']").is(":checked") == false){
+				alert("상담자율처리 동의를 하셔야 진행이 가능합니다.");	
+        setTimeout(function(){
+          $('#terms').focus();
+        }, 1); 
+        return;
+			}	
+	    	
+      $('.info_content').addClass('show');
+      
+    }
+ 
+  </script>
+</body>
+
+</html>
