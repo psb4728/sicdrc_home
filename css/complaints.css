@@ -1,0 +1,439 @@
+.com_wrap {
+  height: 100%;
+  padding-top: 20rem;
+}
+
+.title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 4rem;
+}
+
+.content_container {
+  border: 1px solid var(--light-blue);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.content_container:last-child {
+  margin: 15rem 0 10rem;
+}
+.content_container .sub_tit {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: left;
+  line-height: 1.3;
+  padding: 2rem 3rem;
+  background: var(--blue);
+  border-bottom: 1px solid var(--light-blue);
+  box-sizing: border-box;
+  border-radius: 20px 20px 0 0;
+}
+
+.calculator_wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 2rem;
+  width: 100%;
+  padding: 4rem 5rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.calculator_wrap label {
+  display: inline-block;
+  width: 14rem;
+  text-align: left;
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-right: 2rem;
+}
+.calculator_wrap .input_info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 2rem;
+}
+.calculator_wrap .input_info .input_wrap {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.calculator_wrap .input_info .input_wrap .dete_wrap {
+  display: flex;
+  column-gap: 1rem;
+}
+.calculator_wrap .input_info .input_wrap input {
+  width: 300px;
+}
+.calculator_wrap .input_info .input_wrap input.dete_input {
+  width: 47%;
+}
+.calculator_wrap .auto_wrap {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+.calculator_wrap .auto_wrap .input_wrap {
+  display: flex;
+  align-items: center;
+}
+.calculator_wrap .auto_wrap .input_wrap input {
+  width: 300px;
+}
+
+.total_wrap {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  text-align: left;
+  padding: 0 5rem 4rem 5rem;
+  box-sizing: border-box;
+}
+.total_wrap .wrap {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+.total_wrap .wrap .input_wrap {
+  display: flex;
+  align-items: flex-end;
+}
+.total_wrap .wrap .input_wrap label {
+  width: 17rem;
+  text-align: left;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.4;
+  border-bottom: 1px solid var(--light-blue);
+}
+.total_wrap .wrap .input_wrap div {
+  display: flex;
+  align-items: flex-end;
+}
+.total_wrap .wrap .input_wrap input {
+  position: relative;
+  width: 100%;
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-align: right;
+  border: none;
+  border-bottom: 1px solid var(--light-blue);
+}
+.total_wrap .wrap .input_wrap input:focus {
+  outline: none;
+}
+.total_wrap .wrap .input_wrap input:disabled {
+  background-color: transparent;
+}
+.total_wrap .wrap .input_wrap span {
+  font-size: 1.4rem;
+  font-weight: 300;
+  padding: 0.6rem;
+}
+.total_wrap .reset_wrap {
+  width: 100%;
+}
+.total_wrap .reset_wrap .reset_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.4rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 1rem 1.6rem;
+  margin: 0 0 0 auto;
+  color: #fff;
+  background: var(--main-color);
+  box-sizing: border-box;
+  transition: background-color 0.3s ease-in-out;
+}
+.total_wrap .reset_wrap .reset_btn:hover {
+  background: var(--hover-color);
+}
+
+.lookup_wrap h4 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 5rem 0;
+}
+.lookup_wrap form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  row-gap: 2rem;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+.lookup_wrap form .input_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1rem;
+  width: calc(100% / 2);
+}
+.lookup_wrap form .input_wrap label {
+  width: 30%;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.check_box_wrap {
+  width: 100%;
+  margin: 4rem 6rem;
+}
+.check_box_wrap.table_checkbox {
+  margin: 0;
+}
+
+.checkbox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+.checkbox .check_text {
+  font-size: 1.4rem;
+  font-weight: 300;
+  padding-left: 5px;
+  box-sizing: border-box;
+}
+.checkbox .checkbox_input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkbox .checkbox_input:checked ~ .checkmark_box .checkmark {
+  background-color: var(--main-color);
+}
+.checkbox .checkbox_input:checked ~ .checkmark_box .checkmark:after {
+  display: block;
+}
+
+.checkmark_box {
+  width: 19px;
+  height: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+}
+.checkmark_box .checkmark {
+  position: relative;
+  width: 19px;
+  height: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #C7D1DC;
+  cursor: pointer;
+  overflow: hidden;
+}
+.checkmark_box .checkmark:after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 49%;
+  width: 4px;
+  height: 8px;
+  border: solid var(--white);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg) translateX(-50%);
+}
+
+.btn_wrap {
+  margin-bottom: 4rem;
+}
+.btn_wrap button {
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 1rem 3rem;
+  color: #fff;
+  background: var(--main-color);
+  transition: background-color 0.3s ease-in-out;
+}
+.btn_wrap button:hover {
+  background: var(--hover-color);
+}
+
+.info_content {
+  display: none;
+  padding: 0 2rem;
+  border-top: 1px solid var(--light-blue);
+  box-sizing: border-box;
+}
+.info_content h4 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 10rem 0 3rem;
+}
+.info_content.show {
+  display: block;
+}
+
+.table_container {
+  width: 100%;
+}
+.table_container table {
+  max-width: 100rem;
+  position: relative;
+  table-layout: fixed;
+  width: 100%;
+  margin-bottom: 5rem;
+  margin: auto;
+}
+.table_container table thead {
+  position: sticky;
+  top: 0;
+  border-top: 2px solid var(--main-color);
+  border-bottom: 1px solid #C7D1DC;
+}
+.table_container table thead tr th {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  padding: 2rem 1rem;
+  background-color: var(--blue);
+  box-sizing: border-box;
+}
+.table_container table thead tr th:first-child {
+  width: 10%;
+}
+.table_container table thead tr th:nth-child(2) {
+  width: 15%;
+}
+.table_container table tbody tr {
+  border-bottom: 1px solid #C7D1DC;
+  transition: background-color 0.2s ease;
+}
+.table_container table tbody tr:hover {
+  background-color: var(--blue);
+}
+.table_container table tbody tr td {
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+.table_container table tbody tr td.over {
+  width: 100%;
+  padding: 0 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.table_container table tbody tr td.red {
+  color: #DC2D2D;
+}
+.table_container table tbody tr td.blue {
+  color: #2A5FFF;
+}
+.table_container .table_check {
+  -webkit-appearance: auto;
+  -moz-appearance: auto;
+  appearance: auto;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+.table_container .btn_wrap {
+  display: flex;
+  justify-content: center;
+  margin: 8rem 0;
+}
+.table_container .btn_wrap .btn {
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 1.4rem 2rem;
+  color: var(--white);
+  background-color: var(--main-color);
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+.table_container .btn_wrap .btn:hover {
+  background: var(--hover-color);
+}
+
+@media screen and (max-width: 1100px) {
+  .total_wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 4rem;
+  }
+  .total_wrap .wrap .input_wrap input {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .lookup_wrap form .input_wrap {
+    width: 100%;
+  }
+  .lookup_wrap form .input_wrap label {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 600px) {
+  .calculator_wrap {
+    padding: 4rem 2rem;
+  }
+  .calculator_wrap .input_info,
+.calculator_wrap .auto_wrap {
+    width: 100%;
+  }
+  .calculator_wrap .input_info .input_wrap,
+.calculator_wrap .auto_wrap .input_wrap {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 1rem;
+  }
+  .calculator_wrap .input_info .input_wrap label,
+.calculator_wrap .auto_wrap .input_wrap label {
+    width: 100%;
+    margin-right: 0;
+  }
+  .calculator_wrap .input_info .input_wrap input,
+.calculator_wrap .auto_wrap .input_wrap input {
+    width: 100%;
+  }
+  .calculator_wrap .input_info .input_wrap .dete_wrap,
+.calculator_wrap .auto_wrap .input_wrap .dete_wrap {
+    flex-wrap: wrap;
+    row-gap: 1rem;
+  }
+  .calculator_wrap .input_info .input_wrap .dete_wrap input,
+.calculator_wrap .auto_wrap .input_wrap .dete_wrap input {
+    width: 100%;
+  }
+
+  .total_wrap {
+    padding: 4rem 2rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .total_wrap .wrap .input_wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .total_wrap .wrap .input_wrap label {
+    border-bottom: none;
+  }
+
+  .lookup_wrap form .input_wrap input {
+    width: 100%;
+  }
+
+  .table_container table thead tr th {
+    font-size: 1.2rem;
+  }
+  .table_container table tbody tr td {
+    font-size: 1.2rem;
+  }
+}
