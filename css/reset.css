@@ -120,6 +120,17 @@ input {
   box-sizing: border-box;
 }
 
+input::placeholder,
+::-webkit-input-placeholder {
+  color: #C6CACF;
+}
+
+input:disabled {
+  -webkit-text-fill-color: var(--text-color);
+  opacity: 1;
+}
+
+
 input[type="checkbox"] {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
