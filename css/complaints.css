@@ -65,6 +65,7 @@
 }
 .calculator_wrap .input_info .input_wrap input {
   width: 300px;
+  height: 31px;
 }
 .calculator_wrap .input_info .input_wrap input.dete_input {
   width: 47%;
@@ -179,12 +180,47 @@
   font-weight: 300;
 }
 
+.slds_checkbox {
+  display: inline-block;
+}
+.slds_checkbox .ch_mark {
+  display: inline-block;
+  position: relative;
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+  background: #fff;
+  border: 1px solid var(--light-blue);
+  transition: border 0.1s linear, background-color 0.1s linear;
+}
+.slds_checkbox [type=checkbox] {
+  width: 1px;
+  height: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.slds_checkbox [type=checkbox]:checked + .ch_mark:after,
+.slds_checkbox [type=checkbox]:checked ~ .ch_mark:after {
+  display: block;
+  content: "";
+  height: 3px;
+  width: 6px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -60%, 0) rotate(-45deg);
+  border-bottom: 2px solid var(--main-color);
+  border-left: 2px solid var(--main-color);
+}
+
 .check_box_wrap {
   width: 100%;
-  margin: 4rem 6rem;
-}
-.check_box_wrap.table_checkbox {
-  margin: 0;
+  margin: 4rem 0;
+  box-sizing: border-box;
 }
 
 .checkbox {

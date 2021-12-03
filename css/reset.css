@@ -120,6 +120,13 @@ input {
   box-sizing: border-box;
 }
 
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 input[type="date"] {
   display: block;
   position: relative;
